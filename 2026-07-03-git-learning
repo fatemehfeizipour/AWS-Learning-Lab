@@ -1,0 +1,11 @@
+# Git Learning – 2026-07-03
+
+Today I tried practicing Git commands and organizing my GitHub repositories.
+
+I used a public system that did not provide administrative access to PowerShell, which limited my ability to install or configure Git and SSH.
+
+However, I still tried to connect Git on my local machine using SSH with GitHub, but it was not successful due to these restrictions.
+
+It was still a good learning experience and helped me understand Git setup challenges in real environments.
+
+![Git SSH error](images/git-error.png)
