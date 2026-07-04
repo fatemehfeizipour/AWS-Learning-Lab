@@ -12,4 +12,9 @@ However, I still tried to connect Git on my local machine using SSH with GitHub,
 It was still a good learning experience and helped me understand Git setup challenges in real environments.
 
 ![Git SSH error](images/git-error.png)
+![Git SSH](images/ssh-git.png)
+![Git SSH](images/ssh-git2.png)
+![Git SSH](images/ssh-git3.png)
+![Git SSH](images/ssh-git4.png)
+![Git SSH](images/ssh-git5.png)
 ----------------------------------------------------------------------------------------------------------------------
