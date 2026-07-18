@@ -3,7 +3,7 @@ on: [push]
 
 jobs:
   testing_github:
-    rund-on: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Hello
         run: echo "Hello, Github Actions"
