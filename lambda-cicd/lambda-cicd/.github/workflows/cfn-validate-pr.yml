@@ -2,6 +2,7 @@ name: Validate CloudFormation on PR
 
 on:
   pull_request:
+    types: [opened, synchronize, reopened, closed]
     paths:
       - 'cloudformation/**'
 
@@ -46,13 +47,13 @@ jobs:
     runs-on: ubuntu-latest
     if: github.event.pull_request.merged == true
     steps:
-      -name: configure AWS Credentials
-       uses: aws-actions/configure-aws-credentials@v1
+      - name: configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ca-central-1
-      -name: Delete Test Stack
-      run: |
-        stack_name="pr-test-stack-${{ github.event.pull_request.number }}"
-        aws cloudformation delete-stack --stack-name $stack_name
+      - name: Delete Test Stack
+        run: |
+          stack_name="pr-test-stack-${{ github.event.pull_request.number }}"
+          aws cloudformation delete-stack --stack-name $stack_name
