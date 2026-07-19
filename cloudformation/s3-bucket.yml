@@ -20,7 +20,7 @@ Resources:
           Value: !Ref Environment
         - Key: Environment
           Value: GithubActionsTesting
-          - Key: Environment
+        - Key: Environment
           Value: GithubActionsTesting Update
 
 
