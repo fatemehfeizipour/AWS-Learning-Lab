@@ -1,4 +1,4 @@
-# test ----------change
+# test ------dfdfdfsfdfdf----change
 AWSTemplateFormatVersion: '2010-09-09'
 Description: 'S3 bucket for our CICD PR'
 
@@ -19,10 +19,6 @@ Resources:
       Tags:
         - Key: Environment
           Value: !Ref Environment
-        - Key: Environment
-          Value: GithubActionsTesting
-        - Key: Environment
-          Value: GithubActionsTesting Update
 
 
 Outputs:
