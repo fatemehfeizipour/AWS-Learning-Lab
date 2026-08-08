@@ -70,7 +70,7 @@ export class RDSStack extends cdk.Stack {
             max_connections: '100'
         }
     });
-        // RDS instanceAZb in AZ 1b
+        // RDS -- instanceAZb in AZ 1b
     const instanceAZb = new rds.DatabaseInstance(this, 'RDS-AZb', {
         vpc: props.vpc,
         vpcSubnets: {
