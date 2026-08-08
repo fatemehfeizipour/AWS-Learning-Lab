@@ -1,4 +1,4 @@
-import * as cdk from 'aws-cdk-lib/core';
+import * as cdk from 'aws-cdk-lib';
 import { Construct } from 'constructs';
 import * as ec2 from 'aws-cdk-lib/aws-ec2';
 
@@ -12,7 +12,7 @@ export class EC2Stack extends cdk.Stack {
         super(scope, id, props);
 
     //EC2 Instance 1 in AZ 1a
-    const instance1 = new ec2.Instance(this, 'MyPrivateEC2', {
+    const instanceAZa = new ec2.Instance(this, 'MyPrivateEC2-AZa', {
         vpc: props.vpc,
         vpcSubnets: {
              subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
@@ -24,9 +24,9 @@ export class EC2Stack extends cdk.Stack {
         instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO)
     })
 
-        cdk.Tags.of(instance1).add('Name', 'MyPrivateEC2-AZ1' )
+        cdk.Tags.of(instanceAZa).add('Name', 'MyPrivateEC2-AZa' )
     // EC2 Instance 2 in AZ 1b
-    const instance2 = new ec2.Instance(this, 'MyPrivateEC2',{
+    const instanceAZb = new ec2.Instance(this, 'MyPrivateEC2',{
         vpc: props.vpc,
         vpcSubnets: {
             subnetType: ec2.SubnetType.PRIVATE_ISOLATED,
@@ -37,6 +37,6 @@ export class EC2Stack extends cdk.Stack {
         }),
         instanceType: ec2.InstanceType.of(ec2.InstanceClass.T2, ec2.InstanceSize.MICRO)
     })
-        cdk.Tags.of(instance2).add('Name', 'MyPrivateEC2-AZ2')
+        cdk.Tags.of(instanceAZb).add('Name', 'MyPrivateEC2-AZb')
     }
 }
